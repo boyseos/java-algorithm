@@ -8,7 +8,7 @@ public class Engine {
 		Member member = null;
 		Service service = new Service();
 		while(true) {
-			System.out.println("0.종료 1.Join 2.회원정보 3.아이디찾기 4.BMI 5.Tax");
+			System.out.println("0.종료 1.Join 2.회원정보 3.아이디찾기 4.BMI 5.Tax 6.성적구하기");
 			switch(scan.nextInt()) {
 			case 0 : System.out.println("종료"); return;
 			case 1:
@@ -16,17 +16,17 @@ public class Engine {
 				member.setId("바보");
 				member.setPw("알아서뭐해");
 				member.setName("몰라");
-				member.setBirth("940245");
+				member.setBirth("19940245");
 				member.setHeight(199.9);
 				member.setWeight(88.8);
 				member.setBlood("B");
-				member.setPay(555555555);
+				member.setPay(5555);
 				member.setKor(77);
 				member.setEng(88);
 				member.setMath(88);
-				member.setCountry("한국");
-				member.setSex("남자");
-				member.getSsn();
+				member.setCountry("중국");
+				member.setGender("여자");
+				member.ssnCal();
 //				System.out.print("아이디 : ");
 //				member.setId(scan.next());
 //				System.out.print("비번 : ");
@@ -54,7 +54,7 @@ public class Engine {
 				System.out.print("아이디 : ");
 				String searchId = scan.next();
 				result = (searchName.equals(member.getName()) && searchId.equals(member.getId())) ? 
-						String.format("이름 : %s\n아이디 : %s",member.getName(), member.getId()): "이름이나 아이디가 틀렸습니다.";
+						String.format("비번 : %s\n주민번호 : %s",member.getPw(), member.getSsn()): "이름이나 아이디가 틀렸습니다.";
 				break;
 			case 4:
 				System.out.println("BMI구하기");
