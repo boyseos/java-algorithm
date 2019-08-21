@@ -1,12 +1,9 @@
-package study05;
+package homework04_member;
 
 import java.util.Random;
 
 public class Member {
-	private String name, id, pw, birth, blood, country, gender, ssn;
-	private double height, weight, bmi;
-	private int kor, eng, math, pay;
-
+	private String name, id, pw, birth, blood, country, gender, ssn, height, weight, bmi, pay;
 	public void setName(String name) {//세터 setter
 		this.name = name; //write한다
 	}
@@ -37,46 +34,28 @@ public class Member {
 	public String getBlood() {
 		return this.blood;
 	}
-	public void setHeight(double height) {
+	public void setHeight(String height) {
 		this.height = height;
 	}
-	public double getHeight() {
+	public String getHeight() {
 		return this.height;
 	}
-	public void setWeight(double weight) {
+	public void setWeight(String weight) {
 		this.weight = weight;
 	}
-	public double getWeight() {
+	public String getWeight() {
 		return this.weight;
 	}
-	public void setKor(int kor) {
-		this.kor = kor;
-	}
-	public int getKor() {
-		return this.kor;
-	}
-	public void setEng(int eng) {
-		this.eng = eng;
-	}
-	public int getEng() {
-		return this.eng;
-	}
-	public void setMath(int math) {
-		this.math = math;
-	}
-	public int getMath() {
-		return this.math;
-	}
-	public void setPay(int pay) {
+	public void setPay(String pay) {
 		this.pay = pay;
 	}
-	public int getPay() {
+	public String getPay() {
 		return this.pay;
 	}
-	public void setBmi(double bmi) {
+	public void setBmi(String bmi) {
 		this.bmi = bmi;
 	}
-	public double getBmi() {
+	public String getBmi() {
 		return this.bmi;
 	}
 	public void setCountry(String country) {
@@ -118,11 +97,10 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		String temp = String.format("회원정보\n이름 : %s	\n아이디 : %s	\n비번 : %s	\n생일(6자리) : %s	\n혈액형 : %s	\n키 : %.1f	\n몸무게 : %.1f	\n주민번호 : %s\n",
+		String temp = String.format("회원정보\n이름 : %s	\n아이디 : %s	\n비번 : %s	\n생일(6자리) : %s	\n혈액형 : %s	\n키 : %s	\n몸무게 : %s	\n주민번호 : %s\n",
 											name,		id,			pw,			birth,		blood,		height,		weight,			ssn);
-		temp += (this.bmi !=0) ? String.format("BMI : %.1f\n", this.bmi) : "";
-		temp += (this.kor !=0) ? String.format("국어점수 : %d\n영어점수 : %d\n수학점수 : %d\n", this.kor, this.eng, this.math) : "";
-		temp += (this.pay !=0) ? String.format("연봉 : %d만원", this.pay) : "";
+		temp += (this.bmi != null) ? String.format("BMI : %s\n", this.bmi) : "";
+		temp += (this.pay != null) ? String.format("연봉 : %s만원", this.pay) : "";
 		return temp;
 	}
 	

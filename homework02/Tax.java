@@ -19,6 +19,6 @@ public class Tax {
 		System.out.print("연봉은 얼마입니까? : ");
 		int pay = scan.nextInt();
 		double tax = 9.7;
-		System.out.printf("연봉  %d만원을 받으시는 %s님께서 납부할 세금은 %f만원 입니다.", pay, name, pay * (100-tax)/100);	
+		System.out.printf("연봉  %d만원을 받으시는 %s님께서 납부할 세금은 %.2f만원 입니다.", pay, name, pay * tax/100);	
 	}
 }

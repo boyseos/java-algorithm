@@ -1,4 +1,4 @@
-package study05;
+package study06;
 
 public class Service {
 	public String getBmical(Member m) {
